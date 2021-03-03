@@ -1,0 +1,18 @@
+@extends('layouts.guest_layout')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            @foreach ($posts as $post)
+            <div class="card">
+                <div class="card-header">{{ $post->title }}</div>
+                <div class="card-body">{{ $post->body }}</div>
+                <div class="card-body">{{ $post->author }}</div>
+            </div>
+            @endforeach
+            
+        </div>
+    </div>
+</div>
+@endsection

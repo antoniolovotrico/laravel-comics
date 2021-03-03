@@ -1,8 +1,22 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
+// Import
+@import 'partials/variables';
+@import 'partials/main';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.container_admin{
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    aside{
+        width: 10%;
+    }
+    main{
+        width: 60%;
+    }
+}
