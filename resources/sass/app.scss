@@ -4,6 +4,7 @@
 // Import
 @import 'partials/variables';
 @import 'partials/main';
+@import 'partials/jumbo';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -34,12 +35,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid lightgray;
     .nav_left{
         height: 100%;
         width: 50%;
         display: flex;
         justify-content: space-evenly;
         list-style: none;
+        margin: 0;
         li,a{
             height: 100%;
             display: flex;
@@ -91,4 +94,14 @@
 .active{
     color: black;
     border-bottom: 4px solid #0082F9;
+}
+
+#search{
+    font-weight: 800;
+    text-decoration: underline 2px solid #0082F9;
+    text-transform: capitalize;
+    i{
+        padding-left: 10px;
+    }
+    
 }

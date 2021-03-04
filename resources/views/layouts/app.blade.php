@@ -41,69 +41,69 @@
                     <a href="#"><img src="{{ asset('img/DC_on_HBOMAX_desktop.svg') }}" alt=""></a>
                 </li> 
         </div>
-        
-            <div class="container_nav">
-                <a href="{{ url('/') }}">
-                    <img src="{{ asset('img/DC_desktop_blue.svg') }}" alt="">
-                </a>
 
-                
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav_left">
-                        <li>
-                            <a  href="#">CHARACTERS</a>
-                        </li>
+        <div class="container_nav">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('img/DC_desktop_blue.svg') }}" alt="">
+            </a>
 
-                        <li>
-                            <a  href="{{ route('comics.index') }}" class="{{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}">COMICS</a>
-                        </li>
-                        
-                        @foreach ($menu_link as $item)
-                        <li>
-                            <a  href="#">{{ $item['name'] }}</a>
-                        </li>
-                        @endforeach
+            
+                <!-- Left Side Of Navbar -->
+                <ul class="nav_left">
+                    <li>
+                        <a  href="#">CHARACTERS</a>
+                    </li>
 
-                    </ul>
+                    <li>
+                        <a  href="{{ route('comics.index') }}" class="{{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}">COMICS</a>
+                    </li>
+                    
+                    @foreach ($menu_link as $item)
+                    <li>
+                        <a  href="#">{{ $item['name'] }}</a>
+                    </li>
+                    @endforeach
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav_right">
-                        <li>
-                            <a  href="#"><i class="fa fa-search" aria-hidden="true"></i> Search </a>
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav_right">
+                    <li>
+                        <a id="search" href="#"> Search <i class="fa fa-search" aria-hidden="true"></i></a>
+                    </li>
+                    
+                    <!-- Authentication Links -->
+                    {{-- @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-                        
-                        <!-- Authentication Links -->
-                        {{-- @guest
+                        @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest --}}
-                    </ul>
-                </div>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest --}}
+                </ul>
             </div>
+        </div>
         
 
         <main class="py-4">

@@ -124,6 +124,54 @@ form #input_body {
   margin-bottom: 20px;
 }
 
+.jumbo {
+  margin-top: 30px;
+  background-color: #1C1C1C;
+}
+
+.jumbo .pre_card {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.jumbo .pre_card h2 {
+  text-transform: uppercase;
+  background-color: #0082F9;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+.jumbo .pre_card .right_menu_jumbo {
+  display: flex;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+.jumbo .pre_card .right_menu_jumbo li {
+  padding: 0 10px;
+}
+
+.jumbo .pre_card .right_menu_jumbo li a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.jumbo .card_container {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11097,6 +11145,7 @@ a.text-dark:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid lightgray;
 }
 
 .container_nav .nav_left {
@@ -11105,6 +11154,7 @@ a.text-dark:focus {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
+  margin: 0;
 }
 
 .container_nav .nav_left li,
@@ -11162,5 +11212,16 @@ a.text-dark:focus {
 .active {
   color: black;
   border-bottom: 4px solid #0082F9;
+}
+
+#search {
+  font-weight: 800;
+  -webkit-text-decoration: underline 2px solid #0082F9;
+          text-decoration: underline 2px solid #0082F9;
+  text-transform: capitalize;
+}
+
+#search i {
+  padding-left: 10px;
 }
 
