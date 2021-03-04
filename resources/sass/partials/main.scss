@@ -1,124 +1,114 @@
-main{
-    width: 80%;
-    height: 80%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
-    background-color: white;
-    overflow-y: scroll;
-    
-    table{
-        tbody{
-            tr{
-                td{
-                    .img_cover{
-                        width: 100px;
-                        height: 60px;
-                    }
+
+table{
+    tbody{
+        tr{
+            td{
+                .img_cover{
+                    width: 320px;
+                    height: 485px;
                 }
             }
         }
     }
-    form{
-        label{
-            margin: 20px;
-            font-size: 2rem;
-        }
-        #input_title, #input_author{
-            width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding: 10px;   
-        }
-        #input_body{
-            width: 100%;
-            height: 120px;
-            margin-top: 10px;
-            margin-bottom: 40px;
-            padding: 20px;   
-        }
+}
+form{
+    label{
+        margin: 20px;
+        font-size: 2rem;
     }
-    .view_btn, .edit_btn, .delete_btn{
-        box-shadow: 0 0 2px 2px lightgrey;
-        color: white;
+    #input_title, #input_author{
         width: 100%;
-        border: 0;
-        border-radius: 5%;
-        &:hover{
-            box-shadow: 0 0 10px grey;
-            transition: ease-in-out 0.5s;
-            transform: scale(1.10);
-            background-color: #513e5e;
-            cursor: pointer; 
-        }
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;   
     }
-    .view_btn{
-        background-color: green;
+    #input_body{
+        width: 100%;
+        height: 120px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        padding: 20px;   
     }
-    .edit_btn{
-        background-color: goldenrod;
+}
+.view_btn, .edit_btn, .delete_btn{
+    box-shadow: 0 0 2px 2px lightgrey;
+    color: white;
+    width: 100%;
+    border: 0;
+    border-radius: 5%;
+    &:hover{
+        box-shadow: 0 0 10px grey;
+        transition: ease-in-out 0.5s;
+        transform: scale(1.10);
+        background-color: #513e5e;
+        cursor: pointer; 
     }
-    .delete_btn{
-        background-color: red;
+}
+.view_btn{
+    background-color: green;
+}
+.edit_btn{
+    background-color: goldenrod;
+}
+.delete_btn{
+    background-color: red;
+}
+#create_btn{
+    width: 50%;   
+    padding: 10px;
+    background-color: darkblue;
+    box-shadow: 0 0 2px 2px lightgrey;
+    color: white;
+    border: 0;
+    border-radius: 5%;
+    margin: 20px 0;
+    &:hover{
+        box-shadow: 0 0 10px grey;
+        transition: ease-in-out 0.5s;
+        transform: scale(1.10);
+        background-color: #513e5e;
+        cursor: pointer; 
     }
-    #create_btn{
-        width: 50%;   
-        padding: 10px;
-        background-color: darkblue;
-        box-shadow: 0 0 2px 2px lightgrey;
-        color: white;
-        border: 0;
-        border-radius: 5%;
-        margin: 20px 0;
-        &:hover{
-            box-shadow: 0 0 10px grey;
-            transition: ease-in-out 0.5s;
-            transform: scale(1.10);
-            background-color: #513e5e;
-            cursor: pointer; 
-        }
-    }
-    .form_container{
+}
+.form_container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    .draw_container{
+        width: 60%;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    aside{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
-        width: 100%;
-        .draw_container{
-            width: 60%;
-            display: flex;
-            flex-direction: column;
             align-items: center;
-        }
-        aside{
-            width: 30%;
+        background-color: wheat;
+        div{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-                align-items: center;
-            background-color: wheat;
-            div{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                width: 50%;
-                select{
-                    width: 100%;
-                    border-radius: 5%;
-                    padding: 2%;
-                }
+            align-items: center;
+            width: 50%;
+            select{
+                width: 100%;
+                border-radius: 5%;
+                padding: 2%;
             }
         }
+    }
 
-    }
-    .error_field_required{
-        background-color: lightblue;
-        border-radius: 50%;
-        height: 50px;
-        min-width: 40%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
+}
+.error_field_required{
+    background-color: lightblue;
+    border-radius: 50%;
+    height: 50px;
+    min-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
