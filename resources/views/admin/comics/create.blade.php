@@ -10,12 +10,6 @@
         @error('title')
             <div class="error_field_required">{{ $message }}</div>
         @enderror
-       
-        <label for="slug">Slug</label>
-        <input id="input_title" type="text" name="slug" placeholder="Write here the title of your comic divided by - "">
-        @error('slug')
-        <div class="error_field_required">{{ $message }}</div>
-        @enderror
         <label for="description">Description</label>
         <textarea cols="30" rows="10" id="input_body" type="text" name="description" placeholder="Write here the description of your comic"></textarea>
         @error('description')

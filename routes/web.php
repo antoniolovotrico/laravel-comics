@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'PageController@home')->name('home');
 //  Route Resource Controller
-Route::resource('posts', 'PostController');
+Route::resource('comics', 'ComicController');
 
 Auth::routes();
 

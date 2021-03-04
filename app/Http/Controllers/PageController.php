@@ -8,7 +8,7 @@ class PageController extends Controller
 {
     public function home()
     {
-        
-        return view('guest.index');
+        $menu_link = config('nav_menu_links');
+        return view('guest.index',compact('menu_link'));
     }
 }

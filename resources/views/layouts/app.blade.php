@@ -12,6 +12,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    {{-- fontawesome --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -21,25 +23,57 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+        <div class="pre_nav">
+            <ul class="list-unstyled">
+                <li class="bg_white">
+                    <a href="#"><img src="{{ asset('img/DC_desktop_blue.svg') }}" alt=""></a>
+                </li> 
+                <li>
+                    <a href="#"><img src="{{ asset('img/DC_community.svg') }}" alt=""></a>
+                </li> 
+                <li>
+                    <a href="#"><img src="{{ asset('img/DC_SHOP_desktop.svg') }}" alt=""></a>
+                </li> 
+                <li>
+                    <a href="#"><img src="{{ asset('img/DC_SHOP_desktop.svg') }}" alt=""></a>
+                </li> 
+                <li>
+                    <a href="#"><img src="{{ asset('img/DC_on_HBOMAX_desktop.svg') }}" alt=""></a>
+                </li> 
+        </div>
+        
+            <div class="container_nav">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('img/DC_desktop_blue.svg') }}" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="nav_left">
+                        <li>
+                            <a  href="#">CHARACTERS</a>
+                        </li>
+
+                        <li>
+                            <a  href="{{ route('comics.index') }}" class="{{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}">COMICS</a>
+                        </li>
+                        
+                        @foreach ($menu_link as $item)
+                        <li>
+                            <a  href="#">{{ $item['name'] }}</a>
+                        </li>
+                        @endforeach
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="nav_right">
+                        <li>
+                            <a  href="#"><i class="fa fa-search" aria-hidden="true"></i> Search </a>
+                        </li>
+                        
                         <!-- Authentication Links -->
-                        @guest
+                        {{-- @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -66,11 +100,11 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
+                        @endguest --}}
                     </ul>
                 </div>
             </div>
-        </nav>
+        
 
         <main class="py-4">
             @yield('content')

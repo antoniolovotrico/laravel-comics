@@ -6,6 +6,7 @@ use App\Comic;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 
 class ComicController extends Controller
@@ -17,8 +18,9 @@ class ComicController extends Controller
      */
     public function index()
     {
+        $menu_link = config('nav_menu_links');
         $comics = Comic::latest()->get();
-        return view('admin.comics.index',compact('comics'));
+        return view('admin.comics.index',compact('comics','menu_link'));
     }
 
     /**
@@ -28,7 +30,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('admin.comics.create');
+        $menu_link = config('nav_menu_links');
+        return view('admin.comics.create','menu_link');
     }
 
     /**
@@ -39,7 +42,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        // $request['slug'] = Str::slug($request->title);
+        $request['slug'] = Str::slug($request->title);
 
         $validated_data = $request->validate([
             'title' => 'required',
@@ -67,7 +70,8 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        return view('admin.comics.show', compact('comic'));
+        $menu_link = config('nav_menu_links');
+        return view('admin.comics.show', compact('comic','menu_link'));
     }
 
     /**
@@ -78,7 +82,8 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        return view('admin.comics.edit', compact('comic'));
+        $menu_link = config('nav_menu_links');
+        return view('admin.comics.edit', compact('comic','menu_link'));
     }
 
     /**

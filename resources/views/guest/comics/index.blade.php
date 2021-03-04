@@ -1,14 +1,14 @@
-@extends('layouts.guest_layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            @foreach ($posts as $post)
+            @foreach ($comics as $comic)
             <div class="card">
-                <div class="card-header">{{ $post->title }}</div>
-                <div class="card-body">{{ $post->body }}</div>
-                <div class="card-body">{{ $post->author }}</div>
+                <div class="card-header">{{ $comic->title }}</div>
+                <div class="card-body">{{ $comic->description }}</div>
+                <div class="card-body">{{ $comic->price }}</div>
             </div>
             @endforeach
             

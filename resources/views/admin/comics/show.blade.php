@@ -12,6 +12,7 @@
             <th class="created">Created</th>
             <th class="created">Price</th>
             <th class="created">Availability</th>
+            <th class="created">Cover</th>
         </tr>
     </thead>
     <tbody>

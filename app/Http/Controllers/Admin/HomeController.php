@@ -14,7 +14,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $menu_link = config('nav_menu_links');
+        return view('admin.index',compact('menu_link'));
     }
   
 }
