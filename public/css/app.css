@@ -192,6 +192,39 @@ form #input_body {
   font-weight: 800;
 }
 
+.bg_show {
+  margin-top: -20px;
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+}
+
+.bg_show .showim {
+  width: 100%;
+  height: 370px;
+  z-index: 2;
+}
+
+.cont_show {
+  width: 60%;
+  height: 200px;
+  z-index: 2;
+}
+
+.cont_show .img_cover_show {
+  height: 290px;
+  border: 1px solid white;
+  margin-top: 30px;
+  z-index: 2;
+}
+
+.bg_blue {
+  width: 100%;
+  background-color: #0082F9;
+  height: 150px;
+  z-index: 0;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11134,6 +11167,14 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .pre_nav {

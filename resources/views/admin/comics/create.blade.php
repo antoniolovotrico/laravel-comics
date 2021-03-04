@@ -29,6 +29,11 @@
             <input type="file" class="form-control-file" name="cover" id="cover" placeholder="Add a cover image" aria-describedby="coverImgHelper">
             <small id="coverImgHelper" class="form-text text-muted">Add a cover image</small>
         </div>
+        <div class="form-group">
+            <label for="showim">Cover Image</label>
+            <input type="file" class="form-control-file" name="showim" id="cover" placeholder="Add a show image" aria-describedby="showImHelper">
+            <small id="showImHelper" class="form-text text-muted">Add a show image</small>
+        </div>
         
             <button id="create_btn" type="submit">Publish</button>
         

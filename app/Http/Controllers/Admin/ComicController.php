@@ -31,7 +31,7 @@ class ComicController extends Controller
     public function create()
     {
         $menu_link = config('nav_menu_links');
-        return view('admin.comics.create','menu_link');
+        return view('admin.comics.create',compact('menu_link'));
     }
 
     /**
@@ -50,10 +50,13 @@ class ComicController extends Controller
             'availability' => 'required',
             'slug' => 'required',
             'price' => 'required',
-            'cover' => 'nullable | image | max:500'
+            'cover' => 'nullable | image | max:500',
+            'showim' => 'nullable | image | max:1000'
         ]);
+        $showim = Storage::disk('public')->put('show_img', $request->cover);
         $cover = Storage::disk('public')->put('cover_img', $request->cover);
         $validated_data['cover'] = $cover;
+        $validated_data['showim'] = $showim;
 
         Comic::create($validated_data);
         
@@ -99,10 +102,13 @@ class ComicController extends Controller
             'title' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'cover' => 'nullable | image | max:500'
+            'cover' => 'nullable | image | max:500',
+            'showim' => 'nullable | image | max:1000'
         ]);
+        $showim = Storage::disk('public')->put('show_img', $request->showim);
         $cover = Storage::disk('public')->put('cover_img', $request->cover);
         $validated_data['cover'] = $cover;
+        $validated_data['showim'] = $showim;
 
         $comic->update($validated_data);
        

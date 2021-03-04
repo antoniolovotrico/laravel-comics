@@ -9,7 +9,13 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
 .pre_nav{
     background-color: #0082F9;
     width: 100%;

@@ -28,6 +28,14 @@
                 @error('cover')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
+                <div class="form-group">
+                    <label for="showim">showim Image</label>
+                    <input type="file" class="form-control-file" name="showim" id="showim" placeholder="Add a showim image"  aria-describedby="showimImgHelper">
+                    <small id="showimImgHelper" class="form-text text-muted">Add a showim image</small>
+                </div>
+                @error('showim')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
                 <button id="create_btn" type="submit">Edit</button>
             </aside>
         </form>
