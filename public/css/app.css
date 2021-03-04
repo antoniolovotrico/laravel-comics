@@ -172,6 +172,26 @@ form #input_body {
   align-items: flex-start;
 }
 
+.jumbo .card_container .tit_id {
+  display: flex;
+}
+
+.jumbo .card_container h6 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.jumbo .card_container p {
+  color: #0082F9;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

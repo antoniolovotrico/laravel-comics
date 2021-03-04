@@ -27,10 +27,22 @@
         <div>
             <div>
                 @if($comic->cover)
-                <img class="img_cover" src="{{asset('storage/' . $comic->cover )}}" alt="">
+                <a href="{{ route('comics.show', ['comic' => $comic->slug ])}}"><img class="img_cover" src="{{asset('storage/' . $comic->cover )}}" alt=""></a>
                 @endif
             </div>
-            <div>{{ $comic->title }}</div>
+            <div class="tit_id">
+                <h6>{{ $comic->title }}</h6>
+                <h6>#{{ $comic->id }}</h6>
+            </div>
+            <div>
+                @if ($comic->avaliable == 0)
+                   <p>Available Now</p> 
+                @elseif ($comic->avaliable == 1)
+                <p>NotAvailable</p>    
+                @endif
+               
+            </div>
+            
             {{-- <div>{{ $comic->description }}</div> --}}
             {{-- <div>{{ $comic->price }}</div> --}}
         

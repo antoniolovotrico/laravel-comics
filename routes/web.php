@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'PageController@home')->name('home');
 //  Route Resource Controller
-Route::resource('comics', 'ComicController');
+Route::resource('guest/comics', 'ComicController');
 
 Auth::routes();
 
