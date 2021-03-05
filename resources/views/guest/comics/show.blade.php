@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+{{-- {{dd($details)}} --}}
 <div class="bg_show"> 
 
     @if($comic->showim)
@@ -69,31 +69,50 @@
             </li>
             <li>
                 <p>Series:</p>
-                <a  href="#"></a>
+                <a  href="#">
+                    @foreach ($details as $detail)
+                        @if ($comic->id == $detail->comic_id)
+                        {{$detail->series}}    
+                        @endif
+                    @endforeach
+                    
+                </a>
             </li>
             <li>
                 <p>U.S. Price:</p>
-                <a  href="#"></a>
+                <p class="attri">{{$comic->price}}</p>
             </li>
             <li>
                 <p>On Sale Date:</p>
-                <a  href="#"></a>
+                <p class="attri">@foreach ($details as $detail)
+                        @if ($comic->id == $detail->comic_id)
+                        {{$detail->date}}    
+                        @endif
+                    @endforeach</p>
             </li>
             <li>
                 <p>Volume/Issue #:</p>
-                <a  href="#"></a>
-            </li>
-            <li>
-                <p>Trim Size:</p>
-                <a  href="#"></a>
+                <p class="attri">@foreach ($details as $detail)
+                        @if ($comic->id == $detail->comic_id)
+                        {{$detail->volume}}    
+                        @endif
+                    @endforeach</p>
             </li>
             <li>
                 <p>Page Count:</p>
-                <a  href="#"></a>
+                <p class="attri">@foreach ($details as $detail)
+                        @if ($comic->id == $detail->comic_id)
+                        {{$detail->page}}    
+                        @endif
+                    @endforeach</p>
             </li>
             <li>
                 <p>Rated:</p>
-                <a  href="#"></a>
+                <p class="attri">@foreach ($details as $detail)
+                        @if ($comic->id == $detail->comic_id)
+                        {{$detail->rated}}    
+                        @endif
+                    @endforeach</p>
             </li>
         </ul>
 

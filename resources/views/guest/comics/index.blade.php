@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="jumbo">
     <div class="pre_card">
         <h2>Comics & graphic Novels</h2>
@@ -27,7 +28,7 @@
         <div>
             <div>
                 @if($comic->cover)
-                <a href="{{ route('comics.show', ['comic' => $comic->slug ])}}"><img class="img_cover" src="{{asset('storage/' . $comic->cover )}}" alt=""></a>
+                <a href="{{ route('comics.show', ['comic' => $comic->slug ]) }}"><img class="img_cover" src="{{asset('storage/' . $comic->cover ) }}" alt=""></a>
                 @endif
             </div>
             <div class="tit_id">
