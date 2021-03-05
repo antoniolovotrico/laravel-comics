@@ -29,3 +29,68 @@
     height: 150px;
     z-index: 0;
 }
+.desc_container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 500px;
+   
+    .tit_id{
+        display: flex;
+        height: 100px;
+        align-items: center;
+        h6{
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #003F5D;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+    .price_bar{
+        display: flex;
+        background-color: #55BA58;
+        width: 65%;
+        height: 50px;
+        font-weight: 700;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        border-bottom: 1px solid grey;
+        .avaliable{
+            color: #BAFD9C;
+        }
+        .price_bar_left{
+            display: flex;
+            justify-content: space-around;
+            padding: 0 5px;
+            width: 70%;
+            align-items: center;
+        }
+        .price_bar_right{
+            display: flex;
+            justify-content: center;
+            width: 30%;
+            align-items: center;
+            border-left: 1px solid grey;
+            height: 100%;
+            i{
+                padding-left: 5px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+    }
+    .resume{
+        font-family: Arial, Helvetica, sans-serif;
+        width: 65%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        line-height: 1.6rem;
+    }
+
+}

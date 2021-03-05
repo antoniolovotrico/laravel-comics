@@ -226,6 +226,78 @@ form #input_body {
   z-index: 0;
 }
 
+.desc_container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 500px;
+}
+
+.desc_container .tit_id {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.desc_container .tit_id h6 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003F5D;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.desc_container .price_bar {
+  display: flex;
+  background-color: #55BA58;
+  width: 65%;
+  height: 50px;
+  font-weight: 700;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid grey;
+}
+
+.desc_container .price_bar .avaliable {
+  color: #BAFD9C;
+}
+
+.desc_container .price_bar .price_bar_left {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 5px;
+  width: 70%;
+  align-items: center;
+}
+
+.desc_container .price_bar .price_bar_right {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  align-items: center;
+  border-left: 1px solid grey;
+  height: 100%;
+}
+
+.desc_container .price_bar .price_bar_right i {
+  padding-left: 5px;
+}
+
+.desc_container .price_bar .price_bar_right a {
+  text-decoration: none;
+  color: white;
+}
+
+.desc_container .resume {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 65%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  line-height: 1.6rem;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
