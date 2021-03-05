@@ -11365,3 +11365,141 @@ main {
   padding-left: 10px;
 }
 
+footer {
+  width: 100%;
+}
+
+footer .pre_footer {
+  width: 100%;
+  height: 150px;
+  background-color: #0082F9;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer .pre_footer .foot_card {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+footer .pre_footer .foot_card h6 {
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+footer .pre_footer .foot_card img {
+  padding: 10px;
+  height: 70px;
+}
+
+footer .foot_nav {
+  width: 100%;
+  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  height: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+footer .foot_nav .foot_left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .foot_nav .foot_left .foot_links {
+  display: flex;
+  width: 100%;
+}
+
+footer .foot_nav .foot_left .foot_links ul {
+  width: 25%;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer .foot_nav .foot_left .foot_links ul li {
+  line-height: 1.1rem;
+}
+
+footer .foot_nav .foot_left .foot_links ul li a {
+  text-transform: capitalize;
+  color: #959595;
+  font-size: 0.74rem;
+  font-weight: 500;
+}
+
+footer .foot_nav .foot_left .foot_links ul li h5 {
+  color: white;
+  font-weight: 700;
+}
+
+footer .foot_nav .foot_left p {
+  color: #959595;
+  font-size: 0.75rem;
+}
+
+footer .foot_nav .foot_right {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+footer .foot_nav .foot_right img {
+  height: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .foot_bottom {
+  width: 100%;
+  background-color: #303030;
+  height: 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .foot_bottom .sign_up {
+  height: 50%;
+  border: 2px solid #0082F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+
+footer .foot_bottom .sign_up a {
+  color: white;
+  font-weight: 900;
+}
+
+footer .foot_bottom .follow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 28%;
+}
+
+footer .foot_bottom .follow p {
+  color: #0082F9;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+footer .foot_bottom .follow a {
+  display: flex;
+  align-items: center;
+}
+

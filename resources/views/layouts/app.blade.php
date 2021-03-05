@@ -109,6 +109,133 @@
         <main>
             @yield('content')
         </main>
+        <footer>
+            <div class="pre_footer">
+                <div class="foot_card">
+                    <img src="{{ asset('img/buy-bar-DCUI.svg') }}" alt="">
+                    <h6>DIGITAL COMICS</h6>
+                </div>
+                <div class="foot_card">
+                    <img src="{{ asset('img/buy-bar-DCshop.svg') }}" alt="">
+                    <h6>DC MERCHANDISE</h6>
+                </div>
+                <div class="foot_card">
+                    <img src="{{ asset('img/buy-bar-subscription.svg') }}" alt="">
+                    <h6>PRINT SUBSCRIPTIONS</h6>
+                </div>
+                <div class="foot_card">
+                    <img src="{{ asset('img/buy-bar-locator.svg') }}" alt="">
+                    <h6>COMICS SHOP LOCATOR</h6>
+                </div>
+            </div>
+            <div class="foot_nav">
+                <div class="foot_left">
+                    <div class="foot_links">
+                        <ul>
+                            <li>
+                                <h5>DC COMICS</h5>
+                            </li>
+                            <li>
+                                <a  href="#">Characters</a>
+                            </li>
+        
+                            <li>
+                                <a  href="{{ route('comics.index') }}">Comics</a>
+                            </li>
+                            
+                            @foreach ($menu_link as $item)
+                            <li>
+                                <a  href="#">{{ $item['name'] }}</a>
+                            </li>
+                            @endforeach
+        
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5>DC</h5>
+                            </li>
+                            <li>
+                                <a  href="#">Term of use</a>
+                            </li>
+                            <li>
+                                <a  href="#">privacy policy (New)</a>
+                            </li>
+                            <li>
+                                <a  href="#">ad choiches</a>
+                            </li>
+                            <li>
+                                <a  href="#">Tadvertising</a>
+                            </li>
+                            <li>
+                                <a  href="#">jobs</a>
+                            </li>
+                            <li>
+                                <a  href="#">subscription</a>
+                            </li>
+                            <li>
+                                <a  href="#">CPSC Certificates</a>
+                            </li>
+                            <li>
+                                <a  href="#">Ratings</a>
+                            </li>
+                            <li>
+                                <a  href="#">Shop Help</a>
+                            </li>
+                            <li>
+                                <a  href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5>SITES</h5>
+                            </li>
+                            <li>
+                                <a  href="#">DC</a>
+                            </li>
+                            <li>
+                                <a  href="#">DC UNIVERSE INFINITE</a>
+                            </li>
+                            <li>
+                                <a  href="#">DC Kids</a>
+                            </li>
+                            <li>
+                                <a  href="#">DC Shop</a>
+                            </li>
+                            <li>
+                                <a  href="#">MAD Magazine</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <p>
+                        All Site Content TM and © 2020 DC Entertainment, unless otherwise <a href="">noted here</a>. All rights reserved. 
+                    </p>
+                    <p><a href="">Cookies Settings</a></p>
+
+                </div>
+                <div class="foot_right">
+                    <img src="{{ asset('img/logo-background-v2.png')}}" alt="">
+                </div>
+
+
+            </div>
+            <div class="foot_bottom">
+                <div class="sign_up">
+                    <a href="">SIGN-UP NOW!</a>
+                </div>
+                <div class="follow">
+                    <p>FOLLOW US</p>
+                    <a href=""><img src="{{ asset('img/footer-facebook.png')}}" alt=""></a>
+                    <a href=""><img src="{{ asset('img/footer-twitter.png')}}" alt=""></a>
+                    <a href=""><img src="{{ asset('img/footer-youtube.png')}}" alt=""></a>
+                    <a href=""><img src="{{ asset('img/footer-pinterest.png')}}" alt=""></a>
+                    <a href=""><img src="{{ asset('img/footer-periscope.png')}}" alt=""></a>
+                </div>
+
+
+            </div>
+        </footer>
     </div>
 </body>
 </html>
+
