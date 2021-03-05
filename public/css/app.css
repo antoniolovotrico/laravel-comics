@@ -11439,6 +11439,7 @@ footer .pre_footer .foot_card {
   display: flex;
   color: white;
   align-items: center;
+  z-index: 2;
 }
 
 footer .pre_footer .foot_card h6 {
