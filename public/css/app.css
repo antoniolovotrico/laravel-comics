@@ -298,6 +298,49 @@ form #input_body {
   line-height: 1.6rem;
 }
 
+.section_details {
+  height: 400px;
+  background-color: #F6F6F6;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section_details .tab_left,
+.section_details .tab_right {
+  padding-top: 50px;
+  width: 27%;
+  margin-right: 50px;
+}
+
+.section_details .tab_left ul,
+.section_details .tab_right ul {
+  width: 100%;
+  list-style: none;
+}
+
+.section_details .tab_left ul li,
+.section_details .tab_right ul li {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding-top: 5px;
+}
+
+.section_details .tab_left ul li p,
+.section_details .tab_right ul li p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.section_details .tab_left ul li h5,
+.section_details .tab_right ul li h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

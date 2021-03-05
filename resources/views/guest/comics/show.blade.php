@@ -44,8 +44,62 @@
     </div>
     <div class="resume">
         <div>{{ $comic->description }}</div>
+    </div>      
+</div>
+<div class="section_details">
+    <div class="tab_left">
+        <ul>
+            <li>
+                <h5>Talent</h5>
+            </li>
+            <li>
+                <p>Art By:</p>
+                <a  href="#"></a>
+            </li>
+            <li>
+                <p>Written by:</p>
+                <a  href="#"></a>
+            </li>
+
     </div>
-        
+    <div class="tab_right">
+        <ul>
+            <li>
+                <h5>Specs</h5>
+            </li>
+            <li>
+                <p>Series:</p>
+                <a  href="#"></a>
+            </li>
+            <li>
+                <p>U.S. Price:</p>
+                <a  href="#"></a>
+            </li>
+            <li>
+                <p>On Sale Date:</p>
+                <a  href="#"></a>
+            </li>
+            <li>
+                <p>Volume/Issue #:</p>
+                <a  href="#"></a>
+            </li>
+            <li>
+                <p>Trim Size:</p>
+                <a  href="#"></a>
+            </li>
+            <li>
+                <p>Page Count:</p>
+                <a  href="#"></a>
+            </li>
+            <li>
+                <p>Rated:</p>
+                <a  href="#"></a>
+            </li>
+        </ul>
+
+    </div>
+
+
 </div>
 
 
