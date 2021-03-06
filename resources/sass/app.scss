@@ -38,6 +38,9 @@ main{
             height: 100%;
             border-left: 2px solid white;
             transform: skew(-30deg, 0deg);
+            img{
+                transform: skew(30deg, 0deg);
+            }
         }
     }
 }

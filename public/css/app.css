@@ -11340,6 +11340,10 @@ main {
   transform: skew(-30deg, 0deg);
 }
 
+.pre_nav ul li img {
+  transform: skew(30deg, 0deg);
+}
+
 .container_nav {
   height: 120px;
   width: 100%;
