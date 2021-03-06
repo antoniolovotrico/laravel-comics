@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use App\Artist;
+use App\Writer;
 
 
 class ComicController extends Controller
@@ -31,7 +33,9 @@ class ComicController extends Controller
     public function create()
     {
         $menu_link = config('nav_menu_links');
-        return view('admin.comics.create',compact('menu_link'));
+        $artists = Artist::all();
+        $writers = Writer::all();
+        return view('admin.comics.create',compact('menu_link','artists','writers'));
     }
 
     /**
@@ -61,7 +65,9 @@ class ComicController extends Controller
         Comic::create($validated_data);
         
         $comic = Comic::orderBy('id','desc')->first();
-       
+        $comic->artists()->attach($request->artists);
+        $comic->writers()->attach($request->writers);
+
         return redirect()->route('admin.comics.index');
     }
 
@@ -86,7 +92,10 @@ class ComicController extends Controller
     public function edit(Comic $comic)
     {
         $menu_link = config('nav_menu_links');
-        return view('admin.comics.edit', compact('comic','menu_link'));
+        $artists = Artist::all();
+        $writers = Writer::all();
+
+        return view('admin.comics.edit', compact('comic','menu_link','artists','writers'));
     }
 
     /**
@@ -102,6 +111,8 @@ class ComicController extends Controller
             'title' => 'required',
             'description' => 'required',
             'price' => 'required',
+            'artists' => 'required',
+            'writers' => 'required',
             'cover' => 'nullable | image | max:500',
             'showim' => 'nullable | image | max:1000'
         ]);
@@ -111,6 +122,10 @@ class ComicController extends Controller
         $validated_data['showim'] = $showim;
 
         $comic->update($validated_data);
+        $comic->artists()->sync($request->artists);
+        $comic->writers()->sync($request->writers);
+        // $comic->artists()->attach($request->artist);
+        // $comic->writers()->attach($request->writer);
        
         return redirect()->route('admin.comics.index');
     }

@@ -36,6 +36,33 @@
                 @error('showim')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
+                <div>
+                    <label for="artists">Artists</label>
+                    <select name="artists[]" id="artists" multiple>
+                        @if ($artists)
+                            @foreach ($artists as $artist)
+                            <option value="{{ $artist -> id }}">{{ $artist -> name }}</option>    
+                            @endforeach 
+                        @endif
+                    </select>
+                </div>
+                @error('artists')
+                    <div class="error_field_required">{{ $message }}</div>
+                @enderror
+        
+                <div>
+                    <label for="writers">Writer</label>
+                    <select name="writers[]" id="writers" multiple>
+                        @if ($writers)
+                            @foreach ($writers as $writer)
+                            <option value="{{ $writer -> id }}">{{ $writer -> name }}</option>    
+                            @endforeach
+                        @endif
+                    </select>
+                </div>
+                @error('writers')
+                    <div class="error_field_required">{{ $message }}</div>
+                @enderror
                 <button id="create_btn" type="submit">Edit</button>
             </aside>
         </form>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- {{dd($details)}} --}}
+
 <div class="bg_show"> 
 
     @if($comic->showim)
@@ -32,7 +32,7 @@
             <div>US Price: $ {{ $comic->price }}</div>
             <div class="avaliable">
                 @if ($comic->avaliable == 0)
-                avaliable
+                AVALIABLE
                 @elseif ($comic->avaliable == 1)
                 Not Available  
                 @endif
@@ -54,11 +54,23 @@
             </li>
             <li>
                 <p>Art By:</p>
-                <a  href="#"></a>
+                <a  href="#">@if (count($comic->artists) > 0)
+                    @foreach ($comic -> artists as $artist)
+                    {{ $artist -> name }} ,   
+                    @endforeach
+                @else
+                    No Artist
+                @endif</a>
             </li>
             <li>
                 <p>Written by:</p>
-                <a  href="#"></a>
+                <a  href="#">@if (count($comic->writers) > 0)
+                    @foreach ($comic -> writers as $writer)
+                    {{ $writer -> name }} ,   
+                    @endforeach
+                @else
+                    No Writer
+                @endif</a>
             </li>
 
     </div>
