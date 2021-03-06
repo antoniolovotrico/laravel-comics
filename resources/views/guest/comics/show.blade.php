@@ -69,21 +69,42 @@
             </li>
             <li>
                 <p>Series:</p>
-                <a  href="#">
+            </li>
+            <li>
+                <p>U.S. Price:</p>
+            </li>
+            <li>
+                <p>On Sale Date:</p>
+            </li>
+            <li>
+                <p>Volume/Issue #:</p>
+            </li>
+            <li>
+                <p>Page Count:</p>
+            </li>
+            <li>
+                <p>Rated:</p>
+            </li>
+        </ul>
+    
+        <ul>
+            <li>
+                <h5 id="tog">a</h5>
+            </li>
+            <li>
+                <p><a href="#">
                     @foreach ($details as $detail)
                         @if ($comic->id == $detail->comic_id)
                         {{$detail->series}}    
                         @endif
                     @endforeach
                     
-                </a>
+                </a></p>
             </li>
             <li>
-                <p>U.S. Price:</p>
                 <p class="attri">{{$comic->price}}</p>
             </li>
             <li>
-                <p>On Sale Date:</p>
                 <p class="attri">@foreach ($details as $detail)
                         @if ($comic->id == $detail->comic_id)
                         {{$detail->date}}    
@@ -91,7 +112,6 @@
                     @endforeach</p>
             </li>
             <li>
-                <p>Volume/Issue #:</p>
                 <p class="attri">@foreach ($details as $detail)
                         @if ($comic->id == $detail->comic_id)
                         {{$detail->volume}}    
@@ -99,7 +119,6 @@
                     @endforeach</p>
             </li>
             <li>
-                <p>Page Count:</p>
                 <p class="attri">@foreach ($details as $detail)
                         @if ($comic->id == $detail->comic_id)
                         {{$detail->page}}    
@@ -107,7 +126,6 @@
                     @endforeach</p>
             </li>
             <li>
-                <p>Rated:</p>
                 <p class="attri">@foreach ($details as $detail)
                         @if ($comic->id == $detail->comic_id)
                         {{$detail->rated}}    

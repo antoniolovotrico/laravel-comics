@@ -311,6 +311,7 @@ form #input_body {
   padding-top: 50px;
   width: 27%;
   margin-right: 50px;
+  display: flex;
 }
 
 .section_details .tab_left ul,
@@ -350,7 +351,12 @@ form #input_body {
 .section_details .tab_left ul li a,
 .section_details .tab_right ul li a {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+}
+
+.section_details .tab_left ul li #tog,
+.section_details .tab_right ul li #tog {
+  color: #F6F6F6;
 }
 
 /*!
