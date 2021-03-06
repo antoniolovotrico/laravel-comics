@@ -12,6 +12,7 @@
             <th class="created">Created</th>
             <th class="created">Price</th>
             <th class="created">Availability</th>
+            <th class="created">Series</th>
             <th class="created">Cover</th>
         </tr>
     </thead>
@@ -23,6 +24,7 @@
             <td class="created">{{ $comic -> created_at  }}</td>
             <td class="created">{{ $comic -> price  }}</td>
             <td class="created">{{ $comic -> availability  }}</td>
+            <td class="created">{{ $comic -> collection_id  }}</td>
             <td>
                 @if($comic->cover)
                 <img class="img_cover" src="{{asset('storage/' . $comic->cover )}}" alt="">

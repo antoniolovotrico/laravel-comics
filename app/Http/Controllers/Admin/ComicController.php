@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use App\Artist;
 use App\Writer;
+use App\Collection;
 
 
 class ComicController extends Controller
@@ -35,7 +36,8 @@ class ComicController extends Controller
         $menu_link = config('nav_menu_links');
         $artists = Artist::all();
         $writers = Writer::all();
-        return view('admin.comics.create',compact('menu_link','artists','writers'));
+        $collections = Collection::latest()->get();
+        return view('admin.comics.create',compact('menu_link','artists','writers','collections'));
     }
 
     /**
@@ -54,10 +56,11 @@ class ComicController extends Controller
             'availability' => 'required',
             'slug' => 'required',
             'price' => 'required',
+            'collection_id' => 'required',
             'cover' => 'nullable | image | max:500',
             'showim' => 'nullable | image | max:1000'
         ]);
-        $showim = Storage::disk('public')->put('show_img', $request->cover);
+        $showim = Storage::disk('public')->put('show_img', $request->showim);
         $cover = Storage::disk('public')->put('cover_img', $request->cover);
         $validated_data['cover'] = $cover;
         $validated_data['showim'] = $showim;
@@ -67,6 +70,7 @@ class ComicController extends Controller
         $comic = Comic::orderBy('id','desc')->first();
         $comic->artists()->attach($request->artists);
         $comic->writers()->attach($request->writers);
+        
 
         return redirect()->route('admin.comics.index');
     }
@@ -80,6 +84,7 @@ class ComicController extends Controller
     public function show(Comic $comic)
     {
         $menu_link = config('nav_menu_links');
+        
         return view('admin.comics.show', compact('comic','menu_link'));
     }
 
@@ -94,8 +99,9 @@ class ComicController extends Controller
         $menu_link = config('nav_menu_links');
         $artists = Artist::all();
         $writers = Writer::all();
+        $collections = Collection::latest()->get();
 
-        return view('admin.comics.edit', compact('comic','menu_link','artists','writers'));
+        return view('admin.comics.edit', compact('comic','menu_link','artists','writers','collections'));
     }
 
     /**
@@ -113,6 +119,7 @@ class ComicController extends Controller
             'price' => 'required',
             'artists' => 'required',
             'writers' => 'required',
+            'collection_id' => 'required',
             'cover' => 'nullable | image | max:500',
             'showim' => 'nullable | image | max:1000'
         ]);

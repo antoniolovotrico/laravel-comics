@@ -20,6 +20,12 @@
                 <option value="0">true</option>
                 <option value="1">false</option>    
         </select>
+        <label for="collection_id">Series</label>
+        <select name="collection_id" id="collection_id">
+            @foreach ($collections as $collection)
+                <option value="{{$collection->id}}">{{$collection->title}}</option>     
+            @endforeach  
+        </select>
         <label for="price">Price</label>
         <input id="input_title" type="text" name="price" placeholder="Write here the price">
     </div>

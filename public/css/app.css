@@ -84,14 +84,14 @@ form #input_body {
 }
 
 .form_container .draw_container {
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .form_container aside {
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -104,7 +104,7 @@ form #input_body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 50%;
+  width: 60%;
 }
 
 .form_container aside div select {

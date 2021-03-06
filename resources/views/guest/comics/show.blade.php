@@ -104,14 +104,7 @@
                 <h5 id="tog">a</h5>
             </li>
             <li>
-                <p><a href="#">
-                    @foreach ($details as $detail)
-                        @if ($comic->id == $detail->comic_id)
-                        {{$detail->series}}    
-                        @endif
-                    @endforeach
-                    
-                </a></p>
+                <p><a href="#"> {{ $comic -> collection ?$comic->collection->title : 'N/A' }}       </a></p>
             </li>
             <li>
                 <p class="attri">{{$comic->price}}</p>

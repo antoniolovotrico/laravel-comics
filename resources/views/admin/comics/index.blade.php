@@ -2,23 +2,6 @@
 
 @section('content')
 
-{{-- {{dd($comics)}} --}}
-{{-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            @foreach ($posts as $post)
-                <div class="card m-4">
-                    <div class="card-header">Title : {{ $post->title }}
-                        <div class="card-body">Body : {{ $post->body }}</div>
-                    
-                    </div>
-
-                    <div class="card-body">Body : {{ $post->body }}</div>
-                </div>   
-            @endforeach
-        </div>
-    </div>
-</div> --}}
 <a href="{{ route('admin.comics.create') }}" class="btn btn-primary">Add New Comic</a>
 <table class="table">
     
@@ -27,6 +10,8 @@
             <th>ID</th>
             <th>TITLE</th>
             <th>DESCRIPTION</th>
+            <th>SERIES</th>
+            <th>PREVIEW</th>
             <th>ACTION</th>
         </tr>
     </thead>
@@ -37,6 +22,7 @@
             <td scope="row">{{ $comic->id }}</td>
             <td>{{ $comic->title }}</td>
             <td>{{ $comic->description }}</td>
+            <td>{{ $comic->collection_id }}</td>
             <td>
                 @if($comic->cover)
                 <img class="img_cover" src="{{asset('storage/' . $comic->cover )}}" alt="">

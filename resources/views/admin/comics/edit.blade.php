@@ -16,6 +16,12 @@
                 @error('description')
                     <div class="error_field_required">{{ $message }}</div>
                 @enderror
+                <label for="collection_id">Series</label>
+                <select name="collection_id" id="collection_id">
+                @foreach ($collections as $collection)
+                    <option value="{{$collection->id}}">{{$collection->title}}</option>     
+                @endforeach  
+                </select>
                 <label for="price">Price</label>
                 <input id="input_title" type="text" name="price" value="{{ $comic->price }}">
             </div>

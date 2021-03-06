@@ -46,27 +46,14 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('img/DC_desktop_blue.svg') }}" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CHARACTERS</a>
-                        </li>
-
                         <li class="nav-item" >
-                            <a class="nav-link" href="{{ route('comics.index') }}" class="{{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}">COMICS</a>
+                            <a class="nav-link" href="{{ route('comics.index') }}" class="{{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}">Go To The Site</a>
                         </li>
-                        
-                        @foreach ($menu_link as $item)
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">{{ $item['name'] }}</a>
-                        </li>
-                        @endforeach
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -111,7 +98,10 @@
                         <div>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="{{ route('admin.comics.index') }}" class="{{ Route::currentRouteName() ===  'admin.comics.index' ? 'active' : '' }}"><i class="fas fa-book-open fa-lg fa-fw mx-2"></i>Fumetti</a>
+                                    <a href="{{ route('admin.comics.index') }}" class="{{ Route::currentRouteName() ===  'admin.comics.index' ? 'active' : '' }}"><i class="fas fa-book-open fa-lg fa-fw mx-2"></i>Comics</a>
+                                </li> 
+                                <li>
+                                    <a href="{{ route('admin.collections.index') }}" class="{{ Route::currentRouteName() ===  'admin.collections.index' ? 'active' : '' }}"><i class="fas fa-book fa-lg fa-fw mx-2"></i>Series</a>
                                 </li> 
                                 {{-- {{ route('admin.posts.index') }}" class="{{ Route::currentRouteName() ===  'admin.posts.index' ? 'active' : '' }}" --}}
                                 {{-- <li>
