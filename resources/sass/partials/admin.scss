@@ -1,0 +1,13 @@
+.container_admin{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+    aside{
+        width: 20%;
+    }
+    main{
+        width: 80%;
+    }
+}

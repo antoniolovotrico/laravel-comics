@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comic;
 use App\Detail;
+use App\Collection;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -17,8 +18,8 @@ class ComicController extends Controller
     {
         $menu_link = config('nav_menu_links');
         $comics = Comic::latest()->get();
-        
-        return view('guest.comics.index',compact('comics','menu_link'));
+        $collections = Collection::all();
+        return view('guest.comics.index',compact('comics','menu_link','collections'));
     }
 
     /**
