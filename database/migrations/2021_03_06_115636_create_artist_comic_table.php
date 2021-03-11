@@ -17,7 +17,7 @@ class CreateArtistComicTable extends Migration
             $table->unsignedBigInteger('comic_id');
             $table->foreign('comic_id')->references('id')->on('comics')->onDelete('cascade');
             $table->unsignedBigInteger('artist_id');
-            $table->foreign('artist_id')->references('id')->on('artists')->onDelete('cascade');;
+            $table->foreign('artist_id')->references('id')->on('artists')->onDelete('cascade');
         });
     }
 
